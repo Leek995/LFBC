@@ -1,4 +1,4 @@
-package com.example.lfbc;
+package com.example.lfbc.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
