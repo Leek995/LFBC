@@ -1,0 +1,12 @@
+.adminLandingContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.adminForm{
+    width: 30%;
+}
+.adminIMG{
+    width: 70%;
+
+}

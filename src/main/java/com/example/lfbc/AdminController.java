@@ -1,2 +1,14 @@
-package com.example.lfbc;public class AdminController {
+package com.example.lfbc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AdminController {
+    @GetMapping("/admin/sign-in")
+    public String login(){
+        return "admin-signin";
+    }
+
+
 }
