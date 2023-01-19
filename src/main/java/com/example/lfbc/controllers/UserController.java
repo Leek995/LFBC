@@ -17,17 +17,30 @@ public class UserController {
         this.userDoa = userDoa;
     }
 
-    @GetMapping("admin/sign-in")
-    public String showAdminForm(Model model){
-        // allows to use object in Thymeleaf form
+//    @GetMapping("admin/sign-in")
+//    public String showAdminForm(Model model){
+//        // allows to use object in Thymeleaf form
+//        model.addAttribute("user", new User());
+//        return "admin-signin";
+//    }
+//
+//    @PostMapping("admin/sign-in")
+//    public String adminForm(@ModelAttribute("user") User user){
+//        System.out.println(user);
+//        userDoa.save(user);
+//        return "index";
+//    }
+
+    @GetMapping("register")
+    public String showRegisterUserForm(Model model){
         model.addAttribute("user", new User());
-        return "admin-signin";
+        return "register";
+    }
+    @PostMapping("register")
+    public String RegisterUserForm(@ModelAttribute("user") User user){
+        userDoa.save(user);
+        return "register";
     }
 
-    @PostMapping("admin/sign-in")
-    public String adminForm(@ModelAttribute("user") User user){
-        System.out.println(user);
-        userDoa.save(user);
-        return "index";
-    }
+
 }

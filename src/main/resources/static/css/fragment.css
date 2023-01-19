@@ -6,3 +6,39 @@
     width: 75px;
     border-radius: 50%;
 }
+
+.registerFormContainer{
+
+}
+.registerForm{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.registerFormInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 1em;
+    /*align-items: center;*/
+}
+.registerLabel{
+
+}
+.registerError{
+    margin-left: .5em;
+}
+.registerInput{
+    height: 2.5em;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+}
+.registerButton{
+    height: 3em;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+}
+.registerFormTitle{
+    text-align: center;
+}

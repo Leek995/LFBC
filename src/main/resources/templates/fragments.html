@@ -10,6 +10,43 @@
     <link th:href="@{/css/fragment.css}" rel="stylesheet">
 </head>
 <body>
+    <div th:fragment="register-form">
+        <div class="registerFormContainer">
+            <form th:action="@{/register}" th:method="post"  th:object="${user}" class="registerForm">
+                <h1 class="registerFormTitle">Register</h1>
+                <div class="registerFormInput">
+                    <label class="registerLabel">First Name:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{firstname}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Last Name:<span class="registerError">Error Message</span></label>
+
+                    <input th:field="*{lastname}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Phone Number:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{phone_number}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Email:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{email}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Username:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{username}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Password:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{password}" type="text" class="registerInput"/>
+                </div>
+                <div class="registerFormInput">
+                    <label class="registerLabel">Confirm Password:<span class="registerError">Error Message</span></label>
+                    <input th:field="*{confirm_password}" type="text" class="registerInput"/>
+                </div>
+                <button type="button" class="registerButton">Submit</button>
+            </form>
+        </div>
+    </div>
     <div th:fragment="navbar">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
