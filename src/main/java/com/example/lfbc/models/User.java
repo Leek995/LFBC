@@ -16,7 +16,7 @@ public class User {
     @Column(nullable = false, length = 25)
     private String lastname;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, unique = true, length = 100)
     private String email;
 
     @Column(nullable = false, unique = true, length = 50)
@@ -48,6 +48,13 @@ public class User {
         this.confirm_password = confirm_password;
         this.role = role;
         this.phone_number = phone_number;
+    }
+    // Used for auth. process (login/logout)
+    public User(User copy){
+        id = copy.id;
+        email = copy.email;
+        username = copy.username;
+        password = copy.password;
     }
 
     public long getId() {

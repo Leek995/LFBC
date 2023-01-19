@@ -1,6 +1,7 @@
 package com.example.lfbc.services;
 import com.example.lfbc.models.User;
 import com.example.lfbc.repositories.UserRepository;
+import com.example.lfbc.security.UserWithRoles;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
